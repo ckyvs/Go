@@ -15,11 +15,11 @@ func main() {
 	c := 0
 	if str[0] == 'i' && str[len-1] == 'n' {
 		if strings.Contains(str, "a") {
-			fmt.Print("True\n")
+			fmt.Print("Found\n")
 			c = 1
 		}
 	}
 	if c == 0 {
-		fmt.Print("False\n")
+		fmt.Print("Not Found\n")
 	}
 }
