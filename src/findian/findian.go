@@ -1,15 +1,19 @@
- 
-package main
+ package main
 
 import (
 	"fmt"
+    "bufio"
 	"strings"
+    "os"
 )
 
 func main() {
+    scanner := bufio.NewScanner(os.Stdin)
 	var st string
 	fmt.Print("Enter a string : ")
-	fmt.Scan(&st)
+	if scanner.Scan() {
+        st = scanner.Text()
+    }
 	len := len(st)
 	str := strings.ToLower(st)
 	c := 0
